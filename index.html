@@ -1,3 +1,98 @@
-<a href="https://vaxurian.netlify.app" target="_blank">
-  <button>View Project 1</button>
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Work Hub</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #000000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* CONTAINER */
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    /* BUTTON STYLE */
+    .project-btn {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      font-size: clamp(18px, 4vw, 26px);
+      color: #ffffff;
+      background: #050505;
+      border: 2px solid #1e90ff;
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: center;
+
+      box-shadow:
+        0 0 10px rgba(30, 144, 255, 0.5),
+        0 0 20px rgba(30, 144, 255, 0.3);
+
+      transition: all 0.25s ease;
+    }
+
+    .project-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow:
+        0 0 15px rgba(30, 144, 255, 0.9),
+        0 0 35px rgba(30, 144, 255, 0.6);
+    }
+
+    .project-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 480px) {
+      .project-btn {
+        padding: 18px;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <button class="project-btn"
+      onclick="window.open('https://vaxurian.netlify.app', '_blank')">
+      Project 01
+    </button>
+
+    <button class="project-btn"
+      onclick="window.open('https://launchprofitzweb.netlify.app', '_blank')">
+      Project 02
+    </button>
+
+    <button class="project-btn"
+      onclick="window.open('https://example.com', '_blank')">
+      Project 03
+    </button>
+
+  </div>
+
+</body>
+</html>
